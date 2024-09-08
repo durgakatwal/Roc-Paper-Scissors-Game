@@ -1,60 +1,190 @@
-*{
+* {
     margin: 0;
     padding: 0;
     text-align: center;
 }
-h1{
+
+/* Styling for the header */
+h1 {
     background-color: #081b31;
     color: white;
     height: 5rem;
     line-height: 5rem;
 }
 
-.choice{
+/* Styling for choice items */
+.choice {
     height: 165px;
     width: 165px;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: background-color 0.3s ease;
 }
-.choice:hover{
+
+.choice:hover {
     cursor: pointer;
     background-color: #081b31;
 }
-img{
+
+/* Styling for images */
+img {
     height: 150px;
     width: 150px;
     object-fit: cover;
     border-radius: 50%;
 }
-.choices{
+
+/* Styling for choices container */
+.choices {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 3rem;
     margin-top: 5rem;
+    flex-wrap: wrap; /* Ensures wrapping on smaller screens */
 }
 
-.score-board{
+/* Styling for score board */
+.score-board {
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 2rem;
     margin-top: 3rem;
     gap: 5rem;
+    flex-wrap: wrap; /* Ensures wrapping on smaller screens */
 }
-#user-score,#comp-score{
+
+#user-score,
+#comp-score {
     font-size: 4rem;
 }
-.msg-container{
+
+/* Styling for message container */
+.msg-container {
     margin-top: 5rem;
 }
-#msg{
+
+#msg {
     background-color: #081b31;
     color: white;
     font-size: 2rem;
     display: inline;
     padding: 1rem;
     border-radius: 1rem;
+}
+
+/* Media Queries for Responsiveness */
+
+/* Small devices (max-width: 600px) */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.5rem;
+        height: 4rem;
+        line-height: 4rem;
+    }
+
+    .choice {
+        height: 100px;
+        width: 100px;
+    }
+
+    img {
+        height: 85px;
+        width: 85px;
+    }
+
+    .choices {
+        gap: 1rem;
+        margin-top: 2rem;
+    }
+
+    .score-board {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    #user-score,
+    #comp-score {
+        font-size: 3rem;
+    }
+
+    #msg {
+        font-size: 1.5rem;
+        padding: 0.75rem;
+    }
+}
+
+/* Medium devices (max-width: 992px) */
+@media (max-width: 992px) {
+    h1 {
+        font-size: 2rem;
+        height: 4.5rem;
+        line-height: 4.5rem;
+    }
+
+    .choice {
+        height: 130px;
+        width: 130px;
+    }
+
+    img {
+        height: 115px;
+        width: 115px;
+    }
+
+    .choices {
+        gap: 2rem;
+        margin-top: 3rem;
+    }
+
+    .score-board {
+        gap: 3rem;
+    }
+
+    #user-score,
+    #comp-score {
+        font-size: 3.5rem;
+    }
+
+    #msg {
+        font-size: 1.75rem;
+    }
+}
+
+/* Large devices (max-width: 1200px) */
+@media (max-width: 1200px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .choice {
+        height: 150px;
+        width: 150px;
+    }
+
+    img {
+        height: 130px;
+        width: 130px;
+    }
+
+    .choices {
+        gap: 2.5rem;
+        margin-top: 4rem;
+    }
+
+    .score-board {
+        gap: 4rem;
+    }
+
+    #user-score,
+    #comp-score {
+        font-size: 3.8rem;
+    }
+
+    #msg {
+        font-size: 1.85rem;
+    }
 }
